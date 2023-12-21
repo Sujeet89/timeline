@@ -1,0 +1,134 @@
+
+/* USING FLEX BOX  */
+
+body {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    height: 100vh;
+  }
+  .timeline {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .event {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .event__circle {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+  .event__circle-inner {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #0c7418;
+    z-index: 1;
+  }
+  .event__left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 45%;
+  }
+  .event__title {
+    margin: 0;
+  }
+  .event__content {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+  }
+  .event__right {
+    font-weight: bold;
+    font-size: 12px;
+    width: 45%;
+  }
+  .event::after {
+    content: "";
+    position: absolute;
+    background-color: #e64848;
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    padding: 10px 0px;
+    transform: translateX(-50%);
+  }
+  
+
+
+
+
+
+/* WITHOUT USING FLEX BOX */
+
+
+/* body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .timeline {
+    position: relative;
+    width: 600px;
+    margin: 50px 0;
+  }
+  
+  .event {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  .event__circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #069b1f;
+    z-index: 2;
+  }
+  
+  .event__left,
+  .event__right {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .event__right {
+    margin-left: 60%;
+    margin-top: -1.5rem;
+  }
+  
+  .event::after {
+    content: "";
+    position: absolute;
+    background-color: #e64848;
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    padding: 10px 0px;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+   */
